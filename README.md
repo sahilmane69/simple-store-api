@@ -29,18 +29,35 @@ A complete backend for an eCommerce store built with **Node.js**, **Express**, a
 
 ---
 
-## 📂 Folder Structure
+## 📂 Project Structure
+
+```bash
 simple-store-api/
+├── config/             # Database connection & environment setup
+│   └── db.js
 │
-├── config/ # DB connection & config
-├── controllers/ # Route logic
-├── middleware/ # Auth, error handlers, etc.
-├── models/ # Mongoose schemas
-├── routes/ # API route definitions
-├── utils/ # Helper functions (if any)
-├── .env.example # Sample environment variables
-├── .gitignore
-├── server.js # Entry point
+├── controllers/        # Route logic (products, users, etc.)
+│   └── productController.js
+│   └── userController.js
+│
+├── models/             # Mongoose data models
+│   └── Product.js
+│   └── User.js
+│
+├── routes/             # API endpoints
+│   └── productRoutes.js
+│   └── userRoutes.js
+│
+├── middleware/         # Auth, error handling, validators
+│   └── authMiddleware.js
+│   └── errorHandler.js
+│
+├── utils/              # Helper functions or constants (optional)
+│   └── generateToken.js
+│
+├── .env.example        # Sample env file
+├── .gitignore          # Ignored files
+├── server.js           # Entry point of the app
 └── README.md
 
 
